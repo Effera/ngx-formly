@@ -10,6 +10,8 @@ interface MatFormlyFieldConfig extends FormlyFieldConfig {
   _matprefix: TemplateRef<any>;
   _matsuffix: TemplateRef<any>;
   __formField__: FormlyWrapperFormField;
+  hintStart: string;
+  hintEnd: string;
 }
 
 @Component({
@@ -41,7 +43,8 @@ interface MatFormlyFieldConfig extends FormlyFieldConfig {
         <formly-validation-message [field]="field"></formly-validation-message>
       </mat-error>
       <!-- fix https://github.com/angular/material2/issues/7737 by setting id to null  -->
-      <mat-hint *ngIf="to.description" [id]="null">{{ to.description }}</mat-hint>
+      <mat-hint *ngIf="(to.description || to.hintStart) as hint" [id]="null">{{ hint }}</mat-hint>
+      <mat-hint *ngIf="to.hintEnd" [id]="null" align="end">{{ to.hintEnd }}</mat-hint>
     </mat-form-field>
   `,
   providers: [{ provide: MatFormFieldControl, useExisting: FormlyWrapperFormField }],
