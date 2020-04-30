@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="7.1.0"></a>
+# [7.1.0](https://github.com/ngx-formly/ngx-formly/compare/v7.0.0...v7.1.0) (2020-04-30)
+
+
+### Features
+
+* **material:** mat-hint alignment support ([41567b5](https://github.com/ngx-formly/ngx-formly/commit/41567b5))
+
+
+
 <a name="7.0.0"></a>
 # [7.0.0](https://github.com/ngx-formly/ngx-formly/compare/v5.5.15...v7.0.0) (2020-04-30)
 
