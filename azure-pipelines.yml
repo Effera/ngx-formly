@@ -4,7 +4,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
 trigger:
-- master # Branch is named Effera in Github
+- effera # Branch is named Effera in Github
 
 pool:
   vmImage: 'ubuntu-latest'
@@ -19,7 +19,7 @@ steps:
     npm install -g @angular/cli
     npm install
     npm run build
-  displayName: 'npm install, increment version and build'
+  displayName: 'npm install and build'
 - task: Npm@1
   inputs:
     command: 'publish'
